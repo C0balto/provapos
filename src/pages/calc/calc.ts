@@ -26,7 +26,7 @@ export class CalcPage {
   }
 
   public calculoPrestacao(): void {
-    if(this.meses == undefined){
+    if(this.meses == 0 || this.meses == undefined){
       let alert = this.alertCtrl.create({
         title: 'Campo em Branco',
         subTitle: 'Preencha o número de Parcelas',
@@ -34,7 +34,7 @@ export class CalcPage {
       });
       alert.present();
     }
-      else if(this.juros == undefined){
+      else if(this.juros == 0 || this.juros == undefined){
         let alert = this.alertCtrl.create({
           title: 'Campo em Branco',
           subTitle: 'Preencha o valor dos Juros',
@@ -43,7 +43,7 @@ export class CalcPage {
         alert.present();
 
       }
-      else if(this.prestacao == undefined){
+      else if(this.prestacao == 0 || this.prestacao == undefined){
         let alert = this.alertCtrl.create({
           title: 'Campo em Branco',
           subTitle: 'Preencha o valor da Prestação',
